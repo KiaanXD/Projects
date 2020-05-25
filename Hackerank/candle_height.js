@@ -10,4 +10,4 @@ function birthdayCakeCandles(arr) {
 }
 
 
-console.log(birthdayCakeCandles([3, 2, 1, 3,]));
+console.log(birthdayCakeCandles([3, 4, 4, 4,]));
