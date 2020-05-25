@@ -1,5 +1,5 @@
 /*Font Imports*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 /*Font Import End*/
 /*Custom Properties*/
 :root {
@@ -7,11 +7,11 @@
 }
 /*End Custom Properties*/
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
 }
 .hero-bg {
-  background: #307D99 url('imgs/bg.jpg');
+  background: #307d99 url("imgs/bg.jpg");
   background-position: 12% 83%;
   background-repeat: repeat;
   background-size: cover;
@@ -19,15 +19,14 @@ body {
   text-align: center;
   padding-bottom: 4em;
   height: 100vh;
-  border: solid black;
 }
 header {
   padding: 1em 0;
 }
-p{
+p {
   line-height: var(--leading);
 }
-header a{
+header a {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -35,7 +34,6 @@ header a{
 }
 section.top {
   margin: 0 1em;
-  border: solid black;
 }
 .hero-bg h1 {
   font-size: 2.5rem;
@@ -49,26 +47,26 @@ h1 span {
   z-index: 1;
 }
 h1 span::before {
-  content:'';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 3em;
-  background: #00BFFF;
-  height: .4em;
+  background: #00bfff;
+  height: 0.4em;
   z-index: -1;
-  margin-left: -.5em;
+  margin-left: -0.5em;
 }
-.hero-bg p{
+.hero-bg p {
   font-weight: bold;
-  margin: 0 .8em 3em .8em;
+  margin: 0 0.8em 3em 0.8em;
 }
 .form-container {
   background-color: white;
   margin: 2em -1em 0 -1em;
   padding: 2em;
 }
-.form-container label{
-  color: #2D7D98;
+.form-container label {
+  color: #2d7d98;
   font-weight: bold;
   display: block;
   margin-bottom: 1em;
@@ -76,28 +74,28 @@ h1 span::before {
 }
 .form-container input[type="text"] {
   border: 1px solid #707070;
-  border-radius: .8em;
+  border-radius: 0.8em;
   box-sizing: border-box;
   width: 100%;
   padding: 1em;
   margin-top: 1.2em;
 }
-.form-container p{
-  margin-top: .8em;
+.form-container p {
+  margin-top: 0.8em;
   margin-bottom: 1.5em;
   color: grey;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .form-container input[type="button"] {
-  background-color: #F89104;
-    border: none;
-    width: 100%;
-    color: white;
-    font-weight: bold;
-    padding: 1em 0;
-    border-radius: .5em;
-    font-size: 1.3em;
-    cursor: pointer;
+  background-color: #f89104;
+  border: none;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0;
+  border-radius: 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
 }
 .form-container input[type="button"]:hover {
   background-color: #db850f;
@@ -105,26 +103,26 @@ h1 span::before {
 section.bot {
   margin: 0;
 }
-.right-col{
+.right-col {
   margin: 0 1em;
   text-align: center;
 }
-.right-col h2{
+.right-col h2 {
   text-transform: uppercase;
   position: relative;
   z-index: 1;
 }
 .right-col h2::before {
-  content:'';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 6em;
-  background: #00BFFF;
-  height: .4em;
+  background: #00bfff;
+  height: 0.4em;
   z-index: -1;
-  margin-left: -.6em;
+  margin-left: -0.6em;
 }
-section.bot img{
+section.bot img {
   width: 100%;
 }
 
@@ -132,7 +130,7 @@ section.bot img{
   section.top {
     margin: 0 4em;
   }
-  section.bot{
+  section.bot {
     margin: 0 4em;
   }
   .form-container {
@@ -140,29 +138,27 @@ section.bot img{
   }
 }
 @media (min-width: 950px) {
-  .hero-bg{
+  .hero-bg {
     text-align: left;
   }
-  .hero-bg p{
+  .hero-bg p {
     margin: 0 0 3em 0;
   }
-  .hero-bg section{
+  .hero-bg section {
     width: 65%;
-
   }
-  .form-container{
+  .form-container {
     margin: 5em 0 0 0;
-    border-radius: .8em;
+    border-radius: 0.8em;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
   }
-  form{
+  form {
     display: flex;
-
   }
-  .form-left{
+  .form-left {
     width: 70%;
   }
-  .form-container label{
+  .form-container label {
     margin: 0;
   }
   .form-container input[type="button"] {
@@ -170,43 +166,41 @@ section.bot img{
     font-size: 1.1em;
     margin-left: 1em;
     margin-top: 2.2em;
-    padding: .7em 0;
+    padding: 0.7em 0;
     width: 40%;
   }
-  .hero-bg p{
+  .hero-bg p {
     margin-bottom: 3em;
   }
-  section.bot{
+  section.bot {
     margin: 0;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 50%);
-    grid-template-areas:
-      "bowl content";
+    grid-template-areas: "bowl content";
   }
-  div.right-col{
+  div.right-col {
     grid-area: content;
     padding: 0 2em;
     text-align: left;
   }
-  section.bot img{
+  section.bot img {
     grid-area: bowl;
-
   }
-  div.right-col h2{
-    margin-bottom: -.3em;
+  div.right-col h2 {
+    margin-bottom: -0.3em;
   }
 }
 
-section.top{
+section.top {
   animation: fadeIn 2s forwards;
 }
-@keyframes fadeIn{
-  from{
+@keyframes fadeIn {
+  from {
     opacity: 0;
     transform: translateY(-2em);
   }
-  to{
+  to {
     opacity: 1;
     transform: translate(0);
   }
