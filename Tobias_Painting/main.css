@@ -1,0 +1,156 @@
+html {
+  font-size: 10px;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0;
+  background: rgb(86, 163, 237);
+  background: linear-gradient(
+    90deg,
+    rgba(86, 163, 237, 0.7035014689469538) 0%,
+    rgba(119, 241, 139, 0.7623249983587185) 69%
+  );
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#logo {
+  padding-left: 5em;
+  width: 20%;
+  border: solid purple;
+}
+#logo-img {
+  width: 7em;
+}
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  border: solid orange;
+}
+#navbar ul {
+  display: flex;
+}
+#navbar li {
+  list-style: none;
+  padding-right: 4em;
+  font-size: 2.2rem;
+}
+.navlink {
+  text-decoration: none;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15em 0;
+}
+.hero-bg {
+  background-image: radial-gradient(
+      circle,
+      rgba(240, 147, 41, 1) 0%,
+      rgba(104, 170, 210, 0.798739564185049) 0%,
+      rgba(148, 165, 233, 0.8015406846332283) 100%
+    ),
+    url(https://images.sherwin-williams.com/content_images/sw-img-livingroom-17-hdr.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70em;
+}
+.banner {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  border: solid red;
+  width: 50em;
+}
+.banner h1 {
+  font-size: 4rem;
+}
+.banner h2 {
+  font-size: 3.5rem;
+}
+.banner p {
+  font-size: 2rem;
+}
+#container {
+  background-color: #eee;
+  border: solid purple;
+  padding-top: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80em;
+}
+#container-header {
+  display: flex;
+  position: relative;
+  top: 3.2em;
+}
+#container h1 {
+  font-size: 3rem;
+}
+.linethrough {
+  line-height: 0.5;
+  text-align: center;
+}
+.linethrough span {
+  display: inline-block;
+  position: relative;
+}
+.linethrough span:before,
+.linethrough span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 3px solid pink;
+  top: 0;
+  width: 23.5em;
+}
+.linethrough span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.linethrough span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+#minicontainer {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  padding: 10em 2em;
+  border-bottom: 3px solid pink;
+  border-left: 3px solid pink;
+  border-right: 3px solid pink;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  border: solid blue;
+  justify-content: space-evenly;
+  width: 30em;
+  padding: 1em 2em;
+}
+.box img {
+  width: 8em;
+  height: 8em;
+  margin: 0 auto;
+}
+.box h2 {
+  font-size: 2rem;
+}
+.box p {
+  font-size: 1.5rem;
+  line-height: 150%;
+}
