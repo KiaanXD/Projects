@@ -1,6 +1,6 @@
 html {
   font-size: 10px;
-  overflow-x: ;
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -92,6 +92,7 @@ body {
   height: 80em;
 }
 #container-header {
+  color: black;
 }
 #container h1 {
   font-size: 3rem;
@@ -141,6 +142,7 @@ body {
   box-shadow: 5px 7px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .boxdata {
+  color: black;
 }
 .box img {
   width: 8em;
