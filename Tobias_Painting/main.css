@@ -83,15 +83,14 @@ body {
 #container {
   background-color: #eee;
   border: solid purple;
-  padding-top: 2em;
   text-align: center;
   display: flex;
+  padding: 2em;
   flex-direction: column;
   align-items: center;
   height: 80em;
 }
 #container-header {
-  display: flex;
   position: relative;
   top: 3.2em;
 }
@@ -113,7 +112,7 @@ body {
   height: 5px;
   border-bottom: 3px solid pink;
   top: 0;
-  width: 23.5em;
+  width: 22.9em;
 }
 .linethrough span:before {
   right: 100%;
