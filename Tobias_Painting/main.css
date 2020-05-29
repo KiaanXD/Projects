@@ -5,6 +5,7 @@ html {
 header {
   display: flex;
   align-items: center;
+  height: 7.8em;
   padding: 0.5em 0;
   background: rgb(86, 163, 237);
   background: linear-gradient(
@@ -18,18 +19,30 @@ body {
   padding: 0;
 }
 #logo {
-  padding-left: 5em;
-  width: 20%;
-  border: solid purple;
+ display: flex;
+  width: 80%;
+ 
+  
 }
 #logo-img {
-  width: 8em;
+  width: 20%;
+  padding-left: 4em;
+  padding-top: 1em;
+ 
+}
+#logo-text {
+  align-self: center;
+  font-size: 2em;
+  padding-left: .5em;
+  font-family: Helvetica, sans-serif;
+  color: white;
 }
 #navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
-  border: solid orange;
+
+  
 }
 #navbar ul {
   display: flex;
@@ -37,10 +50,27 @@ body {
 #navbar li {
   list-style: none;
   padding-right: 4em;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .navlink {
   text-decoration: none;
+  color: white;
+
+}
+.navlink:hover {
+  transition-duration: .3s;
+  color: plum;
+  font-size: 2.2rem;
+  
+}
+.header-contact {
+ 
+  width: 40%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  padding-right: em;
+  
 }
 
 #hero {
@@ -93,6 +123,7 @@ body {
 }
 #container-header {
   color: black;
+  
 }
 #container h1 {
   font-size: 3rem;
@@ -130,7 +161,8 @@ body {
   align-items: center;
   width: 90%;
   height: 100%;
-  padding: 8em 2em;
+  
+  
 }
 .box {
   display: flex;
@@ -156,11 +188,49 @@ body {
   font-size: 1.8rem;
   line-height: 150%;
 }
-#grid-start {
-  border: solid black;
+#grid-section {
+  text-align: center;
+  padding: 6em 2em;
+  border: solid cyan;
 }
 .grid-intro {
+  font-weight: bold;
+  width: 100%;
   text-align: center;
+  margin-bottom: 6rem;
+  font-size: 2rem;
+}
+#grid-start {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 3rem;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 2em 0em; /**look at this padding switches to 0 when under anything but desktop height**/
+  margin-bottom: 6rem;
+  border: solid black;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+}
+#grid-start img {
+  width: 90%;
+  border: solid black;
+}
+.project-thumb{
+  
+  border-bottom: solid black;
+}
+.project-block {
+  padding: 1em;
+}
+.project-title {
+  width: 85%;
+  margin: 1em auto;
+  background: #0e153a;
+  border: solid black .5em;
+  text-decoration: none;
+  color: #e2f3f5;
 }
 
 /** Media Q start **/
