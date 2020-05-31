@@ -19,30 +19,26 @@ body {
   padding: 0;
 }
 #logo {
- display: flex;
+  display: flex;
   width: 80%;
- 
-  
+  border: solid blue;
 }
 #logo-img {
-  width: 20%;
+  width: 12rem;
   padding-left: 4em;
-  padding-top: 1em;
- 
+  padding-top: 2em;
 }
 #logo-text {
   align-self: center;
   font-size: 2em;
-  padding-left: .5em;
+  padding-left: 0.5em;
   font-family: Helvetica, sans-serif;
   color: white;
 }
 #navbar {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
-
-  
+  width: auto;
 }
 #navbar ul {
   display: flex;
@@ -55,22 +51,17 @@ body {
 .navlink {
   text-decoration: none;
   color: white;
-
 }
 .navlink:hover {
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   color: plum;
   font-size: 2.2rem;
-  
 }
 .header-contact {
- 
-  width: 40%;
+  width: 75%;
   text-align: center;
   font-size: 2rem;
   color: white;
-  padding-right: em;
-  
 }
 
 #hero {
@@ -123,7 +114,6 @@ body {
 }
 #container-header {
   color: black;
-  
 }
 #container h1 {
   font-size: 3rem;
@@ -161,8 +151,6 @@ body {
   align-items: center;
   width: 90%;
   height: 100%;
-  
-  
 }
 .box {
   display: flex;
@@ -211,14 +199,13 @@ body {
   margin-bottom: 6rem;
   border: solid black;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
+  background-size: 400% 400%;
 }
 #grid-start img {
   width: 90%;
   border: solid black;
 }
-.project-thumb{
-  
+.project-thumb {
   border-bottom: solid black;
 }
 .project-block {
@@ -228,7 +215,7 @@ body {
   width: 85%;
   margin: 1em auto;
   background: #0e153a;
-  border: solid black .5em;
+  border: solid black 0.5em;
   text-decoration: none;
   color: #e2f3f5;
 }
