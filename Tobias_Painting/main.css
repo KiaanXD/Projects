@@ -151,6 +151,7 @@ body {
   align-items: center;
   width: 90%;
   height: 100%;
+  
 }
 .box {
   display: flex;
@@ -212,10 +213,11 @@ body {
   padding: 1em;
 }
 .project-title {
-  width: 85%;
+  width: 90%;
   margin: 1em auto;
+  font-size: 1.5rem;
   background: #0e153a;
-  border: solid black 0.5em;
+  border: solid black 0.3em;
   text-decoration: none;
   color: #e2f3f5;
 }
