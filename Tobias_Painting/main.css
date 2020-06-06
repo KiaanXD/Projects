@@ -179,7 +179,7 @@ body {
 }
 #grid-section {
   text-align: center;
-  padding: 6em 2em;
+  padding: 6em 2em .5em 2em;
   border: solid cyan;
 }
 .grid-intro {
@@ -202,12 +202,10 @@ body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
 }
-#grid-start img {
+.project-thumb {
+  
   width: 90%;
   border: solid black;
-}
-.project-thumb {
-  border-bottom: solid black;
 }
 .project-block {
   padding: 1em;
@@ -221,6 +219,90 @@ body {
   text-decoration: none;
   color: #e2f3f5;
 }
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 6em 0em;
+  
+}
+.btn {
+  background-color: palegreen;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn:hover {
+  color: black;
+  transition-duration: .3s;
+  font-size: 2em;
+  background-color: paleturquoise;
+  
+}
+.btnSpan {
+  font-size: 1.2em;
+  animation-name: blinkingText;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  padding-left: 1em;
+}
+@keyframes blinkingText{
+  0%{     color: whitesmoke;    }
+  49%{    color: whitesmoke; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: whitesmoke;    }
+}
+#contactSection {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "image content";
+  border: solid black;
+}
+#contactSection h1 {
+  font-size: 3rem;
+}
+#left-column {
+  grid-area: image;
+}
+#right-column {
+  grid-area: content;
+  text-align: center;
+  
+}
+#right-column h2 {
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+}
+#right-column h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 6em;
+  background: #00bfff;
+  height: 0.4em;
+  z-index: -1;
+  margin-left: -0.6em;
+}
+#right-column p {
+  font-size: 1.5rem;
+  line-height: 150%;
+  padding: 0 2em;
+}
+.contactImage {
+  width: 100%;
+}
+
 
 /** Media Q start **/
 @media only screen and (max-width: 1330px) {
