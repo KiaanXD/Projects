@@ -13,6 +13,7 @@ header {
     rgba(86, 163, 237, 0.7035014689469538) 0%,
     rgba(119, 241, 139, 0.7623249983587185) 69%
   );
+ 
 }
 body {
   margin: 0;
@@ -21,7 +22,7 @@ body {
 #logo {
   display: flex;
   width: 80%;
-  border: solid blue;
+  
 }
 #logo-img {
   width: 12rem;
@@ -29,16 +30,19 @@ body {
   padding-top: 2em;
 }
 #logo-text {
+  text-align: center;
   align-self: center;
   font-size: 2em;
-  padding-left: 0.5em;
+  padding: 0 0.5em;
   font-family: Helvetica, sans-serif;
   color: white;
+ 
 }
 #navbar {
   display: flex;
   justify-content: flex-start;
   width: auto;
+ 
 }
 #navbar ul {
   display: flex;
@@ -52,11 +56,12 @@ body {
   text-decoration: none;
   color: white;
 }
+
 .navlink:hover {
+  color: green;
   transition-duration: 0.3s;
-  color: plum;
-  font-size: 2.2rem;
 }
+
 .header-contact {
   width: 75%;
   text-align: center;
@@ -174,8 +179,8 @@ body {
   font-size: 2.5rem;
 }
 .box p {
-  font-size: 1.8rem;
-  line-height: 150%;
+  font-size: 1.6rem;
+  line-height: 170%;
 }
 #grid-section {
   text-align: center;
@@ -272,6 +277,7 @@ body {
 }
 #left-column {
   grid-area: image;
+  padding: 0;
 }
 #right-column {
   grid-area: content;
@@ -287,25 +293,40 @@ body {
 #right-column h2::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  width: 6em;
+  bottom: 2px;
+  width: 2em;
   background: #00bfff;
-  height: 0.4em;
+  height: 0.3em;
   z-index: -1;
-  margin-left: -0.6em;
+  margin-left: -0.4em;
 }
-#right-column p {
+#right-column-txt {
+  padding: 1em 2em;
+  
+}
+.right-column-p {
   font-size: 1.5rem;
   line-height: 150%;
   padding: 0 2em;
 }
 .contactImage {
   width: 100%;
+  height: 100%;
 }
 
 
 /** Media Q start **/
 @media only screen and (max-width: 1330px) {
+  #logo {
+    display: flex;
+    width: 80%;
+    border: none;
+  }
+  #logo-img {
+    width: 12rem;
+    padding-left: 4em;
+    padding-top: 2em;
+  }
   #container {
     height: 100%;
   }
@@ -351,9 +372,79 @@ body {
     box-shadow: 5px 7px 5px 0px rgba(0, 0, 0, 0.75);
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
+  #logo {
+    display: flex;
+    width: 80%;
+    border: none;
+  }
+  #logo-img {
+    width: 12rem;
+    padding-left: 4em;
+    padding-top: 2em;
+  }
   .box p {
-    line-height: 130%;
+    line-height: 170%;
+  }
+  .header-contact {
+    display: none;
+   }
+}
+@media only screen and (max-width:800px) { 
+	header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0em 0;
+    background: rgb(86, 163, 237);
+    background: linear-gradient(
+      90deg,
+      rgba(86, 163, 237, 0.7035014689469538) 0%,
+      rgba(119, 241, 139, 0.7623249983587185) 69%
+    );
+   
+  }
+  #logo {
+    display: flex;
+    padding-left: 0em;
+    width: 100%;
+    height: 10em;
+    border: none;
+    justify-content: center;
+  }
+  #logo-img {
+    width: 10em;
+    padding-left: 0em;
+    padding-top: 0em;
+  }
+  #logo-text {
+    text-align: center;
+    align-self: center;
+    font-size: 2em;
+    padding: 0em;
+    font-family: Helvetica, sans-serif;
+    color: white;
+   
+  }
+  #navbar {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    border: solid orange;
+   
+  }
+  #navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #navbar li {
+    list-style: none;
+    padding-right: 2em;
+    padding-left: 0.5em;
+    font-size: 2rem;
+  }
+  .header-contact {
+   display: none;
   }
 }
 
@@ -381,14 +472,49 @@ body {
     padding: 2em 0em 0.3em 0em;
   }
   .box p {
-    line-height: 150%;
+    line-height: 180%;
     text-align: center;
+    padding: 1em;
   }
   .boxdata {
     display: flex;
     flex-direction: column;
-    width: 43em;
+    width: 50em;
     align-self: center;
     height: 100%;
+  }
+  #grid-start {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  #contactSection {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #right-column {
+   height: 50em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  #right-column-txt {
+    padding: 1em 2em;
+    height: auto;
+    
+  }
+  .right-column-p {
+    line-height: 2em;
+    font-size: 1.5em;
+  }
+ 
+  #left-column {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .boxdata {
+    width: auto;
   }
 }
