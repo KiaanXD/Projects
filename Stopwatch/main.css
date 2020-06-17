@@ -1,0 +1,68 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  font-size: 3rem;
+}
+.container {
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#btnStart {
+  padding: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  width: 25em;
+  color: rgb(8, 105, 114);
+}
+#startBtn {
+  font-size: 1.5rem;
+  padding: 0.5em;
+  border: 3px solid #071a52;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(23, 185, 120, 0.6);
+  color: rgb(8, 105, 114);
+}
+#startBtn:hover {
+  background-color: rgb(23, 185, 120, 1);
+}
+#stopBtn {
+  font-size: 1.5rem;
+  padding: 0.5em;
+  border: 3px solid #071a52;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(23, 185, 120, 0.6);
+  color: rgb(8, 105, 114);
+}
+#stopBtn:hover {
+  background-color: rgb(23, 185, 120, 1);
+}
+#resetBtn {
+  font-size: 1.5rem;
+  padding: 0.5em;
+  border: 3px solid #071a52;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(23, 185, 120, 0.6);
+  color: rgb(8, 105, 114);
+}
+#resetBtn:hover {
+  background-color: rgb(23, 185, 120, 1);
+}
+#timer {
+  font-size: 5rem;
+}
+#errorStart {
+  display: flex;
+}
+.errorTxt {
+  font-size: 1.2rem;
+}

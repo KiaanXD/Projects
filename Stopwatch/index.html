@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="stopwatch.js"></script>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1 class="title">Stopwatch</h1>
+    <div class="container">
+      <h2 id="timer">00:00:00</h2>
+      <div id="btnStart">
+        <button type="button" id="startBtn">Start</button>
+        <button type="button" id="stopBtn">Stop</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+      <div id="errorStart">
+        <h3 class="errorTxt"></h3>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
 </html>

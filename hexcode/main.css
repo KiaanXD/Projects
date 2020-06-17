@@ -1,0 +1,28 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+}
+
+.colorHeader {
+  font-size: 3rem;
+}
+.colorBtn {
+  padding: 0.5em;
+  border: 3px solid #fefefe;
+  border-radius: 7px;
+  color: #fefefe;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.colorBtn:hover {
+  background: rgb(0, 0, 0);
+}
+.colorNumber {
+  font-size: 3rem;
+}
