@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+}
+.btnStart {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+}
+#startBtn {
+  margin-bottom: 2em;
+}
+#submitBtn {
+  margin-top: 2em;
+}
+.btn {
+  padding: 1em;
+}
