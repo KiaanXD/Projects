@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="main.css" />
+    <audio id="clip1">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
+    <audio id="clip2">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+    </audio>
+    <audio id="clip3">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+    </audio>
+    <audio id="clip4">
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+    </audio>
+    <audio id="victory">
+      <source src="applause4.mp3"></source>
+    </audio>
+    <audio id="lose">
+      <source src="crowboo.mp3"></source>
+    </audio>
+    
+  </head>
+  <body>
+    <section id="main">
+      <div id="gameStart">
+        <div id="powerButton">
+          <label style="font-size: 1.2em;" for="powerOn">Power</label>
+          <input type="checkbox" id="powerOn" value="power" />
+        </div>
+        <h1>Memory Game</h1>
+        <h2 id="counter"></h2>
+      </div>
+      <div id="btnSquares">
+        <div id="redBox" class="divBox"></div>
+        <div id="blueBox" class="divBox"></div>
+        <div id="greenBox" class="divBox"></div>
+        <div id="yellowBox" class="divBox"></div>
+      </div>
+      <h2 id="results"></h2>
+      <button type="button" id="startBtn">Start</button>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>
