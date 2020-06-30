@@ -8,11 +8,27 @@
   </head>
   <body>
     <section id="contentStart">
-      <h1>Black Jack</h1>
+      <h1 style="text-align: center;">Black Jack</h1>
       <div id="btnStart">
         <button type="button" id="btnPlay">Play</button>
         <button type="button" id="btnHit"">Hit</button>
         <button type="button" id="btnStand">Stand</button>
+      </div>
+      <div class="playervdealer">
+        <div class="Player">
+          <h1>Player</h1>
+        <h1>Cards: <span id="playerCards"></span></h1>
+        <h2>Value: <span id="playerCardsValue"></span></h2>
+        </div>
+        <div class="Dealer">
+          <h1>Dealer</h1>
+          <h1>Cards: <span id="dealerCards"></span></h1>
+          <h2>Value: <span id="dealerCardsValue"></span></h2>
+        </div>
+      </div>
+      <div class ="whoWins">
+      <h1 id="dealerWinStatus"></h1>
+      <h1 id="winStatus"></h1>
       </div>
     </section>
   </body>

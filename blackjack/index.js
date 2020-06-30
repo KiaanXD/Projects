@@ -2,140 +2,186 @@ let cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
 let btnPlay = document.getElementById("btnPlay");
 let btnHit = document.getElementById("btnHit");
 let btnStand = document.getElementById("btnStand");
+let playerCards = document.getElementById('playerCards')
+let playerCardsValue = document.getElementById('playerCardsValue')
+let winStatus = document.getElementById('winStatus');
+let dealerCards = document.getElementById('dealerCards');
+let dealerCardsValue = document.getElementById('dealerCardsValue');
+let dealerWinStatus = document.getElementById('dealerWinStatus');
 let intervalID;
 let playerWinValue;
-let cpuWinValue;
+let dealerWinValue;
 let compTurn;
 let dealerDraw;
+let dealerHandValue;
 let playerDraw;
+let playerHandValue;
 let power;
 btnPlay.addEventListener("click", play);
 function play() {
-  console.clear();
-  dealerDraw = [];
-  playerDraw = [];
-  compTurn = false;
+  winStatus.innerHTML = "";
+  dealerWinStatus.innerHTML = "";
+  dealerCardsValue.innerHTML = "";
   power = true;
   intervalID = 0;
-  let incrementer = 0;
-  while (incrementer < 2) {
-    playerDraw.push(cards[randomNumber(13)]);
-    dealerDraw.push(cards[randomNumber(13)]);
-    incrementer++;
+  playerDraw = [];
+  dealerDraw = [];
+  playerHandValue = 0;
+  dealerHandValue = 0;
+  playerWinValue;
+  dealerWinValue;
+  drawCard(dealerDraw);
+  while (playerDraw.length !== 2) {
+    drawCard(playerDraw);
   }
-  console.log("player Arr");
-  console.log(playerDraw);
-  console.log("dealer Arr");
-  console.log(dealerDraw);
-  playerCheck(playerDraw);
-  cpuCheck(dealerDraw);
+  playerCards.innerHTML = playerDraw;
+  dealerCards.innerHTML = dealerDraw;
+  calculateValue(playerDraw)
 }
-btnHit.addEventListener("click", () => {
-  if (power) hit();
-});
-btnStand.addEventListener("click", () => {
-  if (power) {
-    stand();
-  }
-});
-
-function randomNumber(num) {
-  return Math.floor(Math.random() * num);
+btnHit.addEventListener("click", hit)
+btnStand.addEventListener("click", stand)
+function drawCard(arr) {
+  arr.push(cards[Math.floor(Math.random() * 13)]);
 }
-
-function translate(x) {
-  let translatedCard;
-  switch (x) {
-    case "J":
-      translatedCard = 10;
-      break;
-    case "Q":
-      translatedCard = 10;
-      break;
-    case "K":
-      translatedCard = 10;
-      break;
-    case "A":
-      translatedCard = 11;
-      break;
-  }
-  return translatedCard;
-}
-function playerCheck(arr) {
+function calculateValue (arr) {
+  total = 0;
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] !== "number") {
-      arr[i] = translate(arr[i]);
+    switch(arr[i]) {
+      case 'J':
+        total += 10;
+        break;
+      case 'Q':
+        total+= 10;
+        break;
+      case 'K':
+        total += 10;
+        break;
+      case 'A':
+        if (total < 11) {
+          total+= 11
+        } else if (total >= 11) {
+          total+=1
+        }
+        break;
+    }
+  } else if (typeof arr[i] === "number") {
+    total += arr[i]
     }
   }
-  playerDraw = reduceBJ(arr);
-  if (playerDraw[0] > 21) {
-    playerWinValue = false;
-    playerGameEnd();
-  } else if (playerDraw[0] === 21) {
-    playerWinValue = true;
-    playerGameEnd();
-  }
+  playerHandValue = total;
+  playerCardsValue.innerHTML = playerHandValue;
+  playerCheck()
 }
-function cpuCheck(arr) {
+function calculateDealerValue (arr) {
+  total = 0;
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] !== "number") {
-      arr[i] = translate(arr[i]);
+    switch(arr[i]) {
+      case 'J':
+        total += 10;
+        break;
+      case 'Q':
+        total+= 10;
+        break;
+      case 'K':
+        total += 10;
+        break;
+      case 'A':
+        if (total < 11) {
+          total+= 11
+        } else if (total >= 11) {
+          total+=1
+        }
+        break;
+    }
+  } else if (typeof arr[i] === "number") {
+    total += arr[i]
     }
   }
-  dealerDraw = reduceBJ(arr);
-  if (dealerDraw[0] > 21) {
-    cpuWinValue = false;
-    clearInterval(intervalID);
-    cpuGameEnd();
-  } else if (dealerDraw[0] === 21) {
-    cpuWinValue = true;
-    clearInterval(intervalID);
-    cpuGameEnd();
-  }
-  if (!power) {
-    if (dealerDraw[0] > playerDraw[0] && dealerDraw[0] < 21) {
-      cpuWinValue = true;
-      clearInterval(intervalID);
-      cpuGameEnd();
-    }
-  }
+  dealerHandValue = total;
+  dealerCardsValue.innerHTML = dealerHandValue;
+  dealerCheck()
 }
-function reduceBJ(arr) {
-  sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return [sum];
-}
-
 function hit() {
-  playerDraw.push(cards[randomNumber(13)]);
-  console.log(playerDraw);
-  playerCheck(playerDraw);
+  if (power) {
+  playerDraw.push(cards[Math.floor(Math.random() * 13)]);
+  playerCards.innerHTML = playerDraw;
+  calculateValue(playerDraw);
+  }
 }
 function stand() {
+  if (power) {
   power = false;
-  intervalID = setInterval(cpuTurn, 1000);
+  intervalID = setInterval(dealerTurn, 1000)
+  }
 }
-function cpuTurn() {
+function playerCheck () {
+  if (playerHandValue > 21) {
+    playerWinValue = false;
+    playergameEnd();
+  } else if (playerHandValue === 21) {
+    playerWinValue = true;
+    playergameEnd()
+  }
+}
+function playergameEnd() {
+  power = false;
+  if (playerWinValue === true && playerHandValue === 21) {
+    winStatus.style.color = "green";
+    winStatus.innerHTML = "BLACKJACK!"
+  } 
+  else if (playerWinValue === false && playerHandValue > 21) {
+    winStatus.style.color = 'red'
+    winStatus.innerHTML = 'You busted!'
+  }
+  else if (playerWinValue) {
+    winStatus.style.color = 'green';
+    winStatus.innerHTML = "You win!"
+  } 
+  else if (!playerWinValue) {
+    winStatus.style.color = 'red';
+    winStatus.innerHTML = "You lose!"
+  }
+}
+function dealerTurn () {
   if (!power) {
-    dealerDraw.push(cards[randomNumber(13)]);
-    console.log("Dealer...");
-    console.log(dealerDraw);
-    cpuCheck(dealerDraw);
+    dealerDraw.push(cards[Math.floor(Math.random() * 13)]);
+    dealerCards.innerHTML = dealerDraw;
+    calculateDealerValue(dealerDraw)
   }
 }
-function playerGameEnd() {
-  if (playerWinValue) {
-    console.log("Player Wins!");
-  } else {
-    console.log("Player Loses!");
+function dealerCheck () {
+  if (dealerHandValue > 21) {
+    dealerWinValue = false;
+    playerWinValue = true;
+    clearInterval(intervalID);
+    dealerGameEnd();
+  } else if (dealerHandValue === 21) {
+    dealerWinValue = true;
+    playerWinValue = false;
+    clearInterval(intervalID);
+    dealerGameEnd();
+  } else if (dealerHandValue > playerHandValue && dealerHandValue < 21) {
+    dealerWinValue = true;
+    playerWinValue = false;
+    clearInterval(intervalID);
+    dealerGameEnd()
   }
 }
-function cpuGameEnd() {
-  if (cpuWinValue) {
-    console.log("Dealer wins!");
-  } else {
-    console.log("Dealer busts!");
+function dealerGameEnd () {
+  if (dealerWinValue === true && dealerHandValue === 21) {
+    dealerWinStatus.style.color = 'green';
+    dealerWinStatus.innerHTML = 'Dealer BLACKJACK!'
+    playergameEnd();
+  }
+  else if (dealerWinValue) {
+    dealerWinStatus.style.color = 'green';
+    dealerWinStatus.innerHTML = 'Dealer wins!'
+    playergameEnd();
+  } else if (!dealerWinValue) {
+    dealerWinStatus.style.color = 'red';
+    dealerWinStatus.innerHTML = 'Dealer Busts!'
+    playergameEnd();
   }
 }
