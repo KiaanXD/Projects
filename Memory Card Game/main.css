@@ -13,14 +13,40 @@ body {
 .gameHeader {
     font-size: 2rem;
 }
+.mainHeader {
+    display: flex;
+    flex-direction: column;
+    background: rgb(179,153,162);
+    background: linear-gradient(119deg, rgba(179,153,162,1) 1%, rgba(187,229,237,1) 67%); 
+}
 .gameInfo {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 1em;
-    background: rgb(179,153,162);
-    background: linear-gradient(119deg, rgba(179,153,162,1) 1%, rgba(187,229,237,1) 67%); 
+    
+}
+.gameScore {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 20%;
+}
+
+.goodScore{
+    text-align: center;
+  
+}
+#score {
+    color: black;
+}
+#wrongScore {
+    color: red;
+}
+.scoresub {
+    color: green;
 }
 .memory-game {
     width: 750px;

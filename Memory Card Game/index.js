@@ -2,6 +2,11 @@ const cards = document.querySelectorAll('.memory-card')
 let cardsBg = document.querySelectorAll('.front-face')
 let restartBtn = document.getElementById('restartBtn')
 let timerCenter = document.querySelector('.timerCenter')
+let scoreSub = document.querySelector('.scoreSub');
+let score = document.getElementById('score');
+let gameScore = 0;
+let wrongGameScore = 0;
+let wrongScore = document.getElementById('wrongScore');
 let hasFlippedCard = false;
 let lockboard = false;
 let firstCard, secondCard;
@@ -46,6 +51,12 @@ timerCenter.classList.remove('gold');
 totalSeconds = 0;
 timerStart = false;
 winStatus.style.color = 'black';
+score.style.color = black;
+gameScore = 0;
+score.innerHTML = gameScore;
+wrongGameScore = 0;
+wrongScore.innerHTML = "";
+
 }
 function flipCard () {
     if (!lockboard) {
@@ -69,6 +80,8 @@ function flipCard () {
 function checkForMatch() {
     if (firstCard.dataset.cardface === secondCard.dataset.cardface) {
         winCount++;
+        gameScore+=2;
+        score.innerHTML= gameScore;
         firstCard.firstElementChild.classList.add('correctMatch');
         secondCard.firstElementChild.classList.add('correctMatch');
         disableCards();
@@ -83,6 +96,8 @@ function disableCards () {
     secondCard.removeEventListener('click', flipCard);
 }
 function unflipCards() {
+    wrongGameScore += 1;
+    wrongScore.innerHTML = wrongGameScore;
     firstCard.firstElementChild.classList.add('incorrectMatch');
     secondCard.firstElementChild.classList.add('incorrectMatch');
     lockboard = true;
@@ -106,6 +121,7 @@ function winMatch() {
         secondsLabel.style.color = "#FFD700";
         timerCenter.classList.add('gold');
         winStatus.style.color = 'green';
+        score.style.color = 'green';
     }
 }
 
