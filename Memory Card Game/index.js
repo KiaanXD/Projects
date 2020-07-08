@@ -37,6 +37,8 @@ function restartGame() {
 hasFlippedCard = false;
 lockboard = false;
 [firstCard, secondCard] = [null, null];
+wrongGameScore = 0;
+wrongScore.innerHTML = wrongGameScore;
 winCount = 0;
 shuffle();
 clearInterval(intervalId);
@@ -54,8 +56,7 @@ winStatus.style.color = 'black';
 score.style.color = black;
 gameScore = 0;
 score.innerHTML = gameScore;
-wrongGameScore = 0;
-wrongScore.innerHTML = "";
+
 
 }
 function flipCard () {
