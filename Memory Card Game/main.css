@@ -6,16 +6,32 @@
 body {
     height: 100vh;
     display: flex;
-    background: lightskyblue;
+    background-color: rgba(83, 128, 131, 0.85);
+    flex-direction: column;
+    font-family: 'Mukta', sans-serif;
+}
+.gameHeader {
+    font-size: 2rem;
+}
+.gameInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    background: rgb(179,153,162);
+    background: linear-gradient(119deg, rgba(179,153,162,1) 1%, rgba(187,229,237,1) 67%); 
 }
 .memory-game {
     width: 750px;
     height: 750px;
-    margin: auto;
+    margin: 0.5em auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
-    border: solid pink;
+    background-color: #C3ACCE;
+    border-radius: 5px;
+    padding: 0.5em;
 }
 .memory-card {
     width: calc(25% - 10px);
@@ -43,9 +59,53 @@ body {
   padding: 10px;
   position: absolute;
   border-radius: 5px;
-  background: indigo;
+  background: #DFD9E2;
   backface-visibility: hidden;
 }
 .front-face {
     transform: rotateY(180deg);
+}
+.correctMatch {
+    background-color: #2A7F62;
+}
+.incorrectMatch {
+    background-color: red;
+}
+#winStatus {
+    padding: 0.5em;
+    width: 750px;
+    text-align: center;
+    font-size: 2rem;
+}
+#restartBtn {
+    box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:1px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9752cc;
+}
+#restartBtn:hover {
+    background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	background-color:#bc80ea;
+}
+#restartBtn:active {
+    position:relative;
+	top:1px;
+}
+.timer {
+font-size: 1.5em;
+}
+.gold {
+    color: #FFD700;
+}
+.green {
+    color: green;
 }

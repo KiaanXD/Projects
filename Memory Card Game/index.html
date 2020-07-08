@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Card Game</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <div class="gameInfo">
+    <button type="button" id="restartBtn">Restart</button>
+    <div class="gameHeaders">
+    <h1 class="gameHeader" id="winStatus">Memory Match Game</h1>
+    </div>
+    <div class="timer">
+    <label id="minutes">00</label><span class="timerCenter">:</span><label id="seconds">00</label>
+    </div>
+    </div>
     <section class="memory-game">
         <div class="memory-card" data-cardface="2D">
             <img class="front-face" src="card faces/2D.png"/>
