@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+    <section class="gameArea">
+        <h1 id="gameHeaderTxt">Hangman</h1>
+        <div class="gameSpot">
+            <div class="mainGameplay">
+            <img id="hangmanPic"/>
+            <h3 class="mistakeHeader">Mistakes:<span id="mistakeCount"></span></h3>
+            </div>
+            <p id="wordSpotlight"></p>
+            <p id="hintSpotlight" class="noDisplay"></p>
+        </div>
+        <div id="keyboard">
+            <button type="button" class="keyboardKey" data-key="a">A</button>
+            <button type="button" class="keyboardKey" data-key="b">B</button>
+            <button type="button" class="keyboardKey" data-key="c">C</button>
+            <button type="button" class="keyboardKey" data-key="d">D</button>
+            <button type="button" class="keyboardKey" data-key="e">E</button>
+            <button type="button" class="keyboardKey" data-key="f">F</button>
+            <button type="button" class="keyboardKey" data-key="g">G</button>
+            <button type="button" class="keyboardKey" data-key="h">H</button>
+            <button type="button" class="keyboardKey" data-key="i">I</button>
+            <button type="button" class="keyboardKey" data-key="j">J</button>
+            <button type="button" class="keyboardKey" data-key="k">K</button>
+            <button type="button" class="keyboardKey" data-key="l">L</button>
+            <button type="button" class="keyboardKey" data-key="m">M</button>
+            <button type="button" class="keyboardKey" data-key="n">N</button>
+            <button type="button" class="keyboardKey" data-key="o">O</button>
+            <button type="button" class="keyboardKey" data-key="p">P</button>
+            <button type="button" class="keyboardKey" data-key="q">Q</button>
+            <button type="button" class="keyboardKey" data-key="r">R</button>
+            <button type="button" class="keyboardKey" data-key="s">S</button>
+            <button type="button" class="keyboardKey" data-key="t">T</button>
+            <button type="button" class="keyboardKey" data-key="u">U</button>
+            <button type="button" class="keyboardKey" data-key="v">V</button>
+            <button type="button" class="keyboardKey" data-key="w">W</button>
+            <button type="button" class="keyboardKey" data-key="x">X</button>
+            <button type="button" class="keyboardKey" data-key="y">Y</button>
+            <button type="button" class="keyboardKey" data-key="z">Z</button>
+            <button type="button" id="hintKey">hint</button>
+        </div>
+        <div class="endGame">
+        <h1 id="winStatus"></h1>
+        <button type="button" id="restartBtn">Restart</button>
+        </div>
+    </section>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #2b2d42;;
+}
+#gameHeaderTxt {
+    text-align: center;
+    color: #f8f7f9;
+  
+}
+.gameArea {
+    background-color: #2b2d42;
+}
+.gameSpot {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45em;
+    padding-bottom: 2em;
+    background-color: #f8f7f9;
+    border: solid 4px #2b2d42;
+}
+.mainGameplay {
+    display: flex;
+}
+.mistakeHeader {
+    margin-left: 4em;
+}
+#mistakeCount {
+    padding-left: 0.5em;
+    color: red;
+}
+#hangmanPic {
+    align-self: center;
+    padding-bottom: 1em;
+}
+#wordSpotlight {
+    text-align: center;
+    padding: 0.3em;
+    color: #f8f7f9;
+    margin: 0 auto;
+    background-color: #f7ec59;
+    font-size: 2rem;
+}
+#hintSpotlight {
+    text-align: center;
+    color: #f8f7f9;
+    background: #ff66d8;
+    width: 10em;
+    padding: 0.5em;
+}
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25em;
+    margin: 0 auto;
+    margin-top: 3em;
+    border: solid 3px #92dce5;
+}
+.keyboardKey {
+    width: 11.1%;
+    padding: 0.5em;
+    cursor: pointer;
+    color: #f8f7f9;
+    background-color: #ff66d8;
+    border: solid 1.5px #92dce5;
+}
+.keyboardKey:hover {
+    background-color: #f7ec59;
+    transition-duration: 0.2s;
+}
+.endGame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#winStatus {
+    text-align: center;
+}
+.correctDisabled {
+    background-color: palegreen;
+    cursor: not-allowed;
+}
+.disabled {
+    background-color: orangered;
+    cursor: not-allowed;
+}
+#restartBtn {
+    box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background-color:#92dce5;
+	border-radius:6px;
+	border:1px solid #2b2d42;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+#restartBtn:hover {
+	background-color:#42c1d1;
+}
+#restartBtn:active {
+    position:relative;
+	top:1px;
+}
+#hintKey {
+    border: transparent;
+    width: 3.3em;
+    background-color:#92dce5;
+    color: #f8f8f8
+}
+#hintKey:hover {
+    background-color: #f7ec59;
+    transition-duration: 0.2s;
+}
+.noDisplay {
+    display: none;
+}
