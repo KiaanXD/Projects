@@ -10,7 +10,7 @@ let restartBtn = document.getElementById('restartBtn');
 let hintBtn = document.getElementById('hintKey');
 let hintSpotlight = document.getElementById('hintSpotlight');
 restartBtn.addEventListener('click', restartGame);
-keyboardKeys.forEach(key => key.addEventListener('click', keyPress));
+keyboardKeys.forEach(key => key.addEventListener('click', keyPress, {once: true}));
 hintBtn.addEventListener('click', getHint, {once: true});
 let winGame = false;
 let wordStatus;
@@ -53,14 +53,14 @@ function guessedWord () {
 function checkGame() {
   factor = answer.split('').every(letter => guessedLetters.indexOf(letter) >= 0);
   if (factor) {
-      winStatus.style.color = 'green';
+      winStatus.style.color = '#ff66d8'
       winStatus.innerHTML = 'VICTORY!'
       deactivateKeyboard();
   }
 }
 function checkForLoss() {
     if (mistakes >= 6) {
-        winStatus.style.color = 'red';
+        winStatus.style.color = '#ff66d8'
         winStatus.innerHTML = 'LOSS';
         deactivateKeyboard();
     }
@@ -83,7 +83,8 @@ function restartGame () {
 function getHint() {
     hintSpotlight.classList.remove('noDisplay');
     hintSpotlight.innerHTML = hints[rng];
-    hintBtn.style.backgroundColor = 'red';
+    hintBtn.style.backgroundColor = '#f7ec59';
+    hintBtn.style.cursor = 'not-allowed';
 }
 guessedWord();
 updateHangmanPic();

@@ -4,7 +4,8 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #2b2d42;;
+    background-color: #2b2d42;
+    font-family: 'Poppins', sans-serif;
 }
 #gameHeaderTxt {
     text-align: center;
@@ -22,6 +23,7 @@ body {
     padding-bottom: 2em;
     background-color: #f8f7f9;
     border: solid 4px #2b2d42;
+    border-radius: 50px;
 }
 .mainGameplay {
     display: flex;
@@ -43,7 +45,7 @@ body {
     color: #f8f7f9;
     margin: 0 auto;
     background-color: #f7ec59;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 #hintSpotlight {
     text-align: center;
@@ -51,6 +53,7 @@ body {
     background: #ff66d8;
     width: 10em;
     padding: 0.5em;
+    font-size: .8rem;
 }
 #keyboard {
     display: flex;
@@ -80,13 +83,15 @@ body {
 }
 #winStatus {
     text-align: center;
+    font-size: 2rem;
+    color: #f8f7f9;
 }
 .correctDisabled {
-    background-color: palegreen;
+    background-color: #f7ec59;
     cursor: not-allowed;
 }
 .disabled {
-    background-color: orangered;
+    background-color: #f7ec59;
     cursor: not-allowed;
 }
 #restartBtn {
@@ -102,7 +107,8 @@ body {
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #cc9f52;
+    text-shadow:0px 1px 0px #cc9f52;
+    margin-top: 2em;
 }
 #restartBtn:hover {
 	background-color:#42c1d1;
