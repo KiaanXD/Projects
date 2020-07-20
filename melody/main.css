@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: Sansation; src: url('Sansation_Regular.ttf');
+}
+@font-face {
+    font-family: Sansation-light; src: url('Sansation_Light.ttf')
+}
+@font-face {
+    font-family: Sansation-bold; font-weight: bold; src: url('Sansation_Bold.ttf')
+}
+html {
+    font-size: 10px;
+    font-family: Sansation;
+}
+a {
+    pointer-events: auto !important;  
+    cursor: pointer !important;
+    z-index: 1 !important;
+}
+header {
+    background-color: rgba(255, 241, 221, 0.57);
+    min-height: 5vh;
+}
+nav {
+    display: flex;
+    padding-left: 5%;
+}
+nav > ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 5%;
+}
+nav > ul > li {
+    list-style: none;
+    padding: 0.5em 3em 0.5em 0.5em;
+    font-size: 2em;
+    border: solid transparent;
+    border-radius: 20px;
+}
+.nav-link {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+.nav-link:hover {
+    background-color: rgba(149, 148, 250, 0.8);
+    transition-duration: 0.3s;
+}
+.hero-bg {
+    background: url(jesse-bowser-EkxO-SFU9kc-unsplash\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 95vh;
+    z-index: -1;
+    grid-column: 1 / 5;
+}
+.hero {
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    background: linear-gradient(253.04deg, rgba(244, 195, 147, 0.7) 0%, rgba(242, 231, 156, 0.7) 100%);
+    height: 95vh;
+    z-index: 1;
+}
+.left-col {
+    grid-column: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    height: auto;
+    width: 700px;
+}
+.left-col > h1 {
+    color: white;
+    padding-bottom: 50px;
+    font-size: 4.5em;
+    align-self: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+}
+.left-col > h1::before {
+    content: "";
+  position: absolute;
+  bottom: 30px;
+  width: 3em;
+  background: rgba(149, 148, 250, 0.8);
+  height: 0.4em;
+  border-radius: 30px;
+  z-index: -1;
+}
+.left-col > p {
+    font-size: 3em;
+    font-family: Sansation-light;
+    line-height: 50px;
+    color: white;
+    width: auto;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.cta-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 7.5em 0em 2em 0em;
+    font-family: Sansation-bold;
+   
+}
+.learnMoreBtn {
+    height: 7em;
+    width: 16em;
+    border: transparent;
+    border-radius: 15px;
+    background-color: rgba(240, 189, 111, 1);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.signUpBtn {
+    height: 7em;
+    width: 16em;
+    border: transparent;
+    border-radius: 15px;
+    background-color: rgba(149, 148, 250, 1);
+    cursor: pointer;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.learnMoreLink {
+    color:white;
+    font-size: 28px;
+    text-decoration: none;
+}
+.signUpLink {
+    color:white;
+    font-size: 28px;
+    text-decoration: none;
+}
+.learnMoreBtn:hover {
+    transition-duration: 0.3s;
+    background-color: rgba(255, 241, 221, 1);
+}
+.learnMoreBtn:hover > .learnMoreLink {
+    transition-duration: 0.3s;
+    color: rgba(240, 189, 111, 1);
+ }
+ .signUpBtn:hover {
+    transition-duration: 0.3s;
+    background-color: rgba(255, 241, 221, 1);
+}
+.signUpBtn:hover > .signUpLink {
+    transition-duration: 0.3s;
+    color: rgba(149, 148, 250, 1);
+}
+.right-col {
+    grid-column: 3 / 4;
+    padding: 3em 0 3em 10em;
+}
+.hero-img  {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
