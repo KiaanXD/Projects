@@ -100,12 +100,12 @@ body {
   background-color: white;
 }
 .winning-message {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  text-align: center;
   background-color: rgba(0, 0, 0, 0.9);
   flex-direction: column;
   justify-content: center;
@@ -127,4 +127,17 @@ body {
 }
 .winning-message.show {
   display: flex;
+}
+.winning-message.hide {
+  display: none;
+}
+#restartButton {
+}
+#startBtn {
+}
+#startBtn.hidden {
+  display: none;
+}
+#restartButton.hidden {
+  display: none;
 }
