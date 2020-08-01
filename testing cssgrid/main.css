@@ -8,22 +8,27 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: black;
 }
 .main-bg {
-  background: linear-gradient(240.64deg, #FFF4BD 0%, #FEE0D5 48.02%, #F3D1FC 100%);
+  background: linear-gradient(
+    240.64deg,
+    #fff4bd 0%,
+    #fee0d5 48.02%,
+    #f3d1fc 100%
+  );
 }
 .grid-start {
   height: 100vh;
   display: grid;
-  grid-template-columns: 5% .5fr 1fr 5%;
-  grid-template-rows: 5% 1fr .5fr 5%;
+  grid-template-columns: 5% 0.5fr 1fr 5%;
+  grid-template-rows: 5% 1fr 0.5fr 5%;
   grid-gap: 30px;
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 700px);
+  grid-template-columns: minmax(0, 700px) minmax(0, 300px);
   grid-auto-rows: minmax(0, 1fr) minmax(0, 1fr);
   grid-column: 3 / 4;
   grid-row: 2 / 4;
@@ -34,7 +39,7 @@ body {
 }
 .left-col {
   grid-column: 1 / 2;
-  grid-row:  1 / 2;
+  grid-row: 1 / 2;
   border: solid 5px white;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   transition-timing-function: ease-in-out;
@@ -43,7 +48,7 @@ body {
 .left-col:hover {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
-  transform: scale(1.040);
+  transform: scale(1.04);
 }
 .right-col {
   grid-column: 2 / 3;
@@ -56,9 +61,9 @@ body {
 .right-col:hover {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
-  transform: scale(1.040);
+  transform: scale(1.04);
 }
-.left-col-2{
+.left-col-2 {
   grid-column: 1 / 2;
   grid-row: 2/ 3;
   border: solid 5px white;
@@ -69,7 +74,7 @@ body {
 .left-col-2:hover {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
-  transform: scale(1.040);
+  transform: scale(1.04);
 }
 .grid-img {
   width: 100%;
@@ -92,7 +97,7 @@ body {
 }
 .body-grid > h1 {
   font-size: 2rem;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   font-weight: 600;
 }
 .body-grid > p {
@@ -112,34 +117,34 @@ body {
   flex-direction: column;
 }
 .breathing-col h3 {
-font-size: 2rem;
+  font-size: 2rem;
 }
 .breathing-col span {
   font-size: 2rem;
 }
 #breatheBtn {
-  padding: .5em;
+  padding: 0.5em;
   font-size: 1rem;
   width: 80%;
   align-self: center;
   border-radius: 50px;
   border: transparent;
-  background-color: #C3F0FE;
+  background-color: #c3f0fe;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 #breatheBtn:hover {
   background-color: black;
-  color: #C3F0FE;
+  color: #c3f0fe;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
 .pushedBreatheBtn {
   background-color: black;
-  color: #C3F0FE;
+  color: #c3f0fe;
 }
 .pushedBreatheBtn:hover {
-  background-color: #C3F0FE;
+  background-color: #c3f0fe;
   color: black;
 }
 .incense-col {
@@ -151,15 +156,15 @@ font-size: 2rem;
   justify-self: flex-start;
   align-self: flex-start;
 }
-@media only screen and (max-width:59.375em) { 
+@media only screen and (max-width: 59.375em) {
   /* CSS rules here */
   html,
   body {
-  overflow-y: auto;
+    overflow-y: auto;
   }
   .grid-start {
-    grid-template-columns:  5% minmax(0, 1fr) minmax(0, 1fr) 5%;
-    grid-template-rows: 5% .5fr 1fr .5fr 5%;
+    grid-template-columns: 5% minmax(0, 1fr) minmax(0, 1fr) 5%;
+    grid-template-rows: 5% 0.5fr 1fr 0.5fr 5%;
     height: 100%;
   }
   .hero-grid {
@@ -174,7 +179,7 @@ font-size: 2rem;
   }
   .left-col {
     grid-column: 1 / 2;
-    grid-row:  1 / 2;
+    grid-row: 1 / 2;
   }
   .left-col-2 {
     grid-column: 1 / 2;
@@ -202,17 +207,16 @@ font-size: 2rem;
     grid-column: 2 / 4;
     grid-row: 4 / 5;
     z-index: 0;
-   
   }
   #breatheBtn {
     width: 70%;
   }
 }
-@media only screen and (max-width:30em) { 
+@media only screen and (max-width: 30em) {
   /* CSS rules here */
   .grid-start {
     grid-template-columns: 5% minmax(0, 1fr) 5%;
-    grid-template-rows: 5% .5fr minmax(0, 1fr) .5fr 5%;
+    grid-template-rows: 5% 0.5fr minmax(0, 1fr) 0.5fr 5%;
     height: 100%;
     overflow-y: hidden;
   }
@@ -224,20 +228,18 @@ font-size: 2rem;
     grid-template-rows: 150px 300px 250px;
     justify-content: center;
     align-content: center;
-    
   }
   .left-col {
     grid-column: 1 / 2;
-    grid-row:  1 / 2;
+    grid-row: 1 / 2;
   }
   .right-col {
     grid-column: 1 / 2;
     grid-row: 3/ 4;
-   
   }
   .left-col-2 {
     grid-column: 1 / 2;
-    grid-row: 2 / 3
+    grid-row: 2 / 3;
   }
   .body-grid {
     grid-column: 2 / 3;
@@ -246,7 +248,7 @@ font-size: 2rem;
     padding: 2em;
     line-height: 70px;
   }
-   .breathing-col {
+  .breathing-col {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     z-index: 1;
