@@ -174,7 +174,7 @@ section {
 .card {
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 250px 250px 80px;
+   grid-template-rows: 250px 250px 50px;
    grid-template-areas: "image" "text" "btn";
    background: rgba(29, 29, 29, .9);
    border-radius: 25px;
@@ -243,6 +243,7 @@ section {
     grid-area: btn;
     justify-self: center;
     align-self: center;
+    margin-bottom: 2em;
 }
 .main-color {
     background-color: var(--main-color);
