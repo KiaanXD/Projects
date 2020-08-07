@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 :root {
-  --main-color: #30e3ca;
-  --secondary-color: #f7c860;
-  --tri-color: #b63753;
+  --main-color: #254B7C;
+  --secondary-color: #0F9BDC;
+  --tri-color: #EBAC78;
   --white-color: #f5f5f5;
   --dark-color: rgba(0, 0, 0, 0.66);
   --main-font: "Montserrat", sans-serif;
@@ -83,7 +83,7 @@ nav ul {
   text-transform: uppercase;
   max-width: 200px;
   width: 30%;
-  background-color: var(--secondary-color);
+  background-color: var(--tri-color);
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -136,7 +136,7 @@ section {
   padding: 0.5em 1.5em;
   text-align: center;
   color: #ffffff;
-  background: var(--secondary-color);
+  background: var(--tri-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   text-decoration: none;
@@ -146,10 +146,11 @@ section {
   min-height: 85vh;
 }
 .info-section {
+  padding: 0 0 2em 0;
   background-color: var(--dark-color);
 }
 .container-info {
-  max-width: 95%;
+  max-width: 100%;
   width: 100%;
   border-radius: 2px;
   padding: 2em 0;
@@ -169,17 +170,19 @@ section {
   align-content: center;
   margin-top: 10em;
   height: 100%;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding-bottom: 2em;
 }
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 250px 250px 70px;
-  grid-template-areas: "image" "text" "btn";
+  /* grid-template-rows: 250px 250px 70px;
+  grid-template-areas: "image" "text" "btn"; */
+  grid-template-rows: 250px 250px;
+  grid-template-areas: "image" "text";
   background: rgba(0, 0, 0, 0.66);
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
   margin-top: 3em;
@@ -203,8 +206,10 @@ section {
   align-self: center;
 }
 .card-body > h1 {
-  font-size: 32px;
   font-family: var(--header-font);
+  color: var(--white-color);
+  font-size: 28px;
+  padding-bottom: 0.5em;
 }
 .card-body > p {
   font-style: normal;
@@ -220,34 +225,23 @@ section {
 .card-img {
   width: 100%;
   height: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.card1 > h1 {
-  color: var(--tri-color);
-  font-size: 24px;
-  padding-bottom: 0.5em;
-}
-.card2 > h1 {
-  color: var(--main-color);
-  font-size: 24px;
-  padding-bottom: 0.5em;
-}
-.card3 > h1 {
-  color: var(--secondary-color);
-  font-size: 24px;
-  padding-bottom: 0.5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .img1 {
-  border-bottom: solid 3px var(--tri-color);
+  border-bottom: solid 3px var(--main-color);
+  display: block;
+  padding: 0;
 }
 .img2 {
   border-bottom: solid 3px var(--main-color);
+  display: block;
 }
 .img3 {
-  border-bottom: solid 3px var(--secondary-color);
+  border-bottom: solid 3px var(--main-color);
+  display: block;
 }
-.card-btn-div {
+/* .card-btn-div {
   grid-area: btn;
   display: flex;
   align-items: center;
@@ -266,15 +260,97 @@ section {
   font-weight: bold;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.main-color {
-  background-color: var(--main-color);
-}
-.secondary-color {
   background-color: var(--secondary-color);
+} */
+.aboutwork-section {
+  background-color: var(--dark-color);
+  padding: 4em 0em;
 }
-.tri-color {
-  background-color: var(--tri-color);
+.container-about {
+  padding: 0;
+  max-width: 95vw;
+  overflow-y: hidden;
+  background-color: rgba(37, 75, 124, 0.5);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "image" "body";
+  border: solid 3px var(--white-color);
+}
+.image-col {
+  grid-area: image;
+  max-height: 90vh;
+}
+.imgLg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.body-col {
+  max-height: 90vh;
+  align-self: center;
+}
+.body-div {
+  text-align: center;
+  padding: 9em;
+  color: var(--white-color);
+  
+}
+.body-div > h1 {
+  font-size: 5rem;
+  font-family: var(--header-font);
+  font-weight: bold;
+}
+.body-div > p {
+  margin: 0 auto;
+  margin-top: 2em;
+  font-size: 2rem;
+  font-family: var(--main-font);
+  line-height: 230%;
+  max-width: 90%;
+}
+.portfolio-section {
+  background-color: var(--dark-color);
+  padding: 4em 0em;
+}
+.container-portfolio {
+  padding: 0;
+  max-width: 95vw;
+  overflow-y: hidden;
+  background-color: rgba(37, 75, 124, 0.5);
+}
+.port-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: solid 3px var(--white-color);
+}
+.body-col2 {
+  grid-column: 1 / 2;
+  align-self: center;
+  max-height: 90vh;
+}
+.image-col2 {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-gap: 20px;
+  padding: 1em;
+  grid-template-columns: 1fr 1fr;
+  max-height: 90vh;
+  height: 100%;
+  align-self: center;
+}
+.image-col2 > img {
+  width: 100%;
+  height: 100%;
+  
+  display: block;
+  object-position: center;
+  object-fit: cover;
+}
+.span2 {
+  grid-row: span 2;
 }
 @media only screen and (max-width: 1250px) {
   /* CSS rules here */
@@ -294,6 +370,50 @@ section {
     grid-column: 1 / 3;
     max-width: none;
   }
+  .card1 > h1 {
+    font-size: 24px;
+  }
+  .card1 > p {
+    font-size: 14px;
+  }
+  .card2 > h1 {
+    font-size: 24px;
+  }
+  .card2 > p {
+    font-size: 14px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "image"
+    "body";
+
+    max-height: unset;
+  }
+  .container-about {
+    max-width: 90vw;
+  }
+  .body-div {
+    padding: 4em;
+  }
+  .container-portfolio {
+    max-width: 90vw;
+  }
+  .port-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+  .image-col2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  .body-col2 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
 }
 @media only screen and (max-width: 650px) {
   /* CSS rules here */
@@ -303,4 +423,31 @@ section {
   .card-div-3 {
     grid-column: unset;
   }
+  .card1 > h1 {
+    font-size: 28px;
+  }
+  .card1 > p {
+    font-size: 16px;
+  }
+  .card2 > h1 {
+    font-size: 28px;
+  }
+  .card2 > p {
+    font-size: 16px;
+  }
+  .container-about {
+    max-width: 99%;
+  }
+  .body-div > h1 {
+    font-size: 3rem;
+  }
+  .body-div > p {
+    font-size: 1.8rem;
+    line-height: 170%;
+    max-width: unset;
+  }
+  .container-portfolio {
+    max-width: 99%;
+  }
+  
 }
