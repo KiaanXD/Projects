@@ -49,7 +49,7 @@ nav ul {
   justify-content: flex-end;
 }
 .logo-div {
-  padding-top: 1em;
+  padding-top: 2em;
 }
 .nav-link {
   text-decoration: none;
@@ -57,7 +57,6 @@ nav ul {
   margin-right: 4em;
   color: white;
   font-weight: bold;
-  text-shadow: var(--text-shadow);
 }
 .nav-link a {
   color: white;
@@ -68,8 +67,7 @@ nav ul {
   transition-duration: 0.3s;
 }
 .logo-img {
-  height: 85px;
-  width: 85px;
+  height: 128px;
 }
 .header-btn {
   text-decoration: none;
@@ -112,7 +110,7 @@ section {
   color: white;
 }
 .hero-content h1 {
-  font-family: var(--header-font);
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -433,7 +431,7 @@ section {
     font-size: 16px;
   }
   .container-about {
-    max-width: 99%;
+    max-width: 90%;
   }
   .body-div > h1 {
     font-size: 3rem;
@@ -444,6 +442,6 @@ section {
     max-width: unset;
   }
   .container-portfolio {
-    max-width: 99%;
+    max-width: 90%;
   }
 }
