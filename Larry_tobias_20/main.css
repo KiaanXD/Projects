@@ -10,6 +10,7 @@
   --secondary-color: #0f9bdc;
   --tri-color: #ebac78;
   --white-color: #f5f5f5;
+  --bg-orange: rgba(159, 98, 13, 0.8);
   --dark-color: rgba(0, 0, 0, 0.66);
   --main-font: "Montserrat", sans-serif;
   --header-font: "Montserrat Alternates", sans-serif;
@@ -23,7 +24,7 @@ body {
   margin: 0;
   font-family: var(--main-font);
   overflow-x: hidden;
-  height: 100%;
+
 }
 .main-bg {
   background: url(imgs/mainbg.png);
@@ -32,10 +33,16 @@ body {
 }
 header {
   height: auto;
+  z-index: 1000;
   /* position: fixed;
   top: 0px;
   width: 100%;
   z-index: 1500; */
+}
+.sticky {
+  background-color: var(--main-color);
+  z-index: 999;
+  height: 10vh;
 }
 .navbar {
   display: flex;
@@ -46,12 +53,13 @@ header {
   top: 0;
   width: 100%;
   z-index: 1500;
+  transition: 0.6s;
 }
 .brand {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em;
+
 }
 .brand-title {
   font-size: 2rem;
@@ -74,30 +82,46 @@ header {
 .navbar-links:last-child {
   margin-right: 1em;
 }
-
-.navbar-links li {
-  font-size: 1.5rem;
+.navitem {
   list-style: none;
   font-weight: bold;
   border: none;
   border-radius: 10px;
 }
-.navbar-links li a {
+.navlink,
+.current {
   text-decoration: none;
   color: white;
   padding: 1rem;
   display: block;
   border: none;
+  font-size: 1.5rem;
+  position: relative;
 }
-.navbar-links li:not(:last-child):hover {
-  transition-duration: 0.3s;
+.navlink::before,
+.current::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -.1rem;
   background-color: var(--secondary-color);
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 650ms;
+}
+.current::before {
+  transform: scaleX(1);
+}
+.navlink:hover::before {
+  transform: scaleX(1);
 }
 /*Hamburger Menu*/
 .toggle-btn {
   display: flex;
   position: absolute;
-  top: 3.5rem;
+  top: 2rem;
   right: 1rem;
   display: none;
   flex-direction: column;
@@ -163,6 +187,9 @@ header {
   background-color: var(--tri-color);
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  display: block;
+  border: none;
 }
 section {
   padding: 4rem 0;
@@ -223,7 +250,7 @@ section {
 }
 .info-section {
   padding: 0 0 2em 0;
-  background-color: var(--dark-color);
+  background-color: var(--bg-orange);
 }
 .container-info {
   max-width: 100%;
@@ -257,7 +284,7 @@ section {
   grid-template-areas: "image" "text" "btn"; */
   grid-template-rows: 250px 250px;
   grid-template-areas: "image" "text";
-  background: rgba(0, 0, 0, 0.66);
+  background: #282424;
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -339,7 +366,7 @@ section {
   background-color: var(--secondary-color);
 } */
 .aboutwork-section {
-  background-color: var(--dark-color);
+  background: var(--bg-orange);
   padding: 4em 0em;
 }
 .container-about {
@@ -354,6 +381,7 @@ section {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "image" "body";
   border: solid 3px var(--white-color);
+  background-color: #384B63;
 }
 .image-col {
   grid-area: image;
@@ -388,7 +416,7 @@ section {
   max-width: 90%;
 }
 .portfolio-section {
-  background-color: var(--dark-color);
+  background: var(--bg-orange);
   padding: 4em 0em 6em 0em;
 }
 .container-portfolio {
@@ -432,6 +460,7 @@ section {
   grid-column: 1 / 2;
   align-self: center;
   max-height: 85vh;
+  background-color: #384B63;
 }
 .image-col2 {
   grid-column: 2 / 3;
@@ -511,14 +540,14 @@ section {
   font-weight: bold;
 }
 .contact-body > p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0 auto;
   line-height: 35px;
   padding: 0rem 1rem 2rem 1rem;
   
 }
 .contact-body > h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-shadow: var(--text-shadow);
   font-weight: bold;
   padding-bottom: 2rem;
@@ -535,7 +564,7 @@ section {
 .contact-btn {
   text-align: center;
   width: 100%;
-  max-width: 175px;
+  max-width: 200px;
   min-width: auto;
   display: block;
   margin: 0 auto;
@@ -546,15 +575,16 @@ section {
   border: none;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  padding: .3em;
+  padding: .6em;
 }
 .mobile-icon {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 footer {
   padding: 4em 0;
   background-color: var(--dark-color);
 }
+
 @media only screen and (max-width: 1520px) {
 .about-grid {
   grid-template-columns: 1fr;
@@ -625,11 +655,11 @@ footer {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 900px) {
+/* @media only screen and (max-width: 900px) {
   .contact-wrap {
     height: 90%;
   }
-}
+} */
 @media only screen and (max-width: 770px) {
   /**Mobile Navigation**/
   .brand-title {
@@ -641,11 +671,13 @@ footer {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    height: auto;
   }
   .navbar-links {
     display: none;
     width: 100%;
     background: var(--dark-color);
+    margin-top: 2em;
   }
   .navbar-links ul{
     flex-direction: column;
@@ -654,11 +686,14 @@ footer {
   }
   .navbar-links li {
     text-align: center;
-    margin: .2em;
-    width: 50%;
+    margin: .3em;
+    width: 60%;
   }
   .navbar-links li a {
-    padding: .5em;
+    padding: .8em;
+  }
+  .header-btn {
+    margin-top: .5em;
   }
   .navbar-links li:not(:last-child) {
     margin-right: 0;
@@ -676,9 +711,9 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .contact-wrap {
+  /* .contact-wrap {
     height: 80%;
-  }
+  } */
 }
 @media only screen and (max-width: 650px) {
   /* CSS rules here */
@@ -720,16 +755,16 @@ footer {
     max-width: 90%;
   }
   .image-col {
-    max-height: 55vh;
+    max-height: 50%;
   }
   .body-col {
-   max-height: 55vh;
+   max-height: 50%;
   }
   .image-col2 {
-    max-height: 55vh;
+    max-height: 50%;
   }
   .body-col2 {
-    max-height: 55vh;
+    max-height: 50%;
   }
   .container-contact {
     padding: 0;
@@ -742,11 +777,9 @@ footer {
     max-width: 90%;
   }
   .contact-section {
-    height: auto;
+    height: 100%;
   }
-  .contact-wrap {
-    height: 90%;
-  }
+ 
   
 }
 @media only screen and (max-width:550px) { 
@@ -779,6 +812,13 @@ footer {
   .portfolio-btn {
     font-size: 1.5rem;
   }
+  .contact-section {
+    height: 100%;
+    padding: .5em;
+  }
+  .contact-wrap {
+    height: 600px
+  }
 }
 @media only screen and (max-width:500px) {
   .image-col {
@@ -795,11 +835,21 @@ footer {
     padding: 0;
   }
   .contact-wrap {
-    height: 100%;
+    height: 600px
+  }
+  .contact-body > h1 {
+    font-size: 3.2rem;
+  }
+  .contact-body > p {
+    font-size: 1.5rem;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width:400px) { 
   /* CSS rules here */
+  .navbar-links li {
+    width: 80%;
+  }
   .body-div > h1 {
     font-size: 2rem;
     max-width: 90%;
@@ -812,10 +862,10 @@ footer {
     font-size: 1.5rem;
   }
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .hero-content h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .hero-btn {
     font-size: 1.5rem;
