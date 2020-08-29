@@ -10,7 +10,7 @@
     --secondary-color: #0f9bdc;
     --tri-color: #ebac78;
     --white-color: #f5f5f5;
-    --bg-orange: rgba(159, 98, 13, 0.8);
+    --bg-orange: #c99957;
     --dark-color: rgba(0, 0, 0, 0.66);
     --main-font: "Montserrat", sans-serif;
     --header-font: "Montserrat Alternates", sans-serif;
@@ -34,7 +34,7 @@ header {
     z-index: 1500; */
 }
 .main-wrap {
-    background-color: var(--dark-color);
+    background-color: var(--bg-orange);
     height: 100%;
     border: solid
 }

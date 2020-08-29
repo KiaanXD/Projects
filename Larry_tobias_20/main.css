@@ -10,12 +10,16 @@
   --secondary-color: #0f9bdc;
   --tri-color: #ebac78;
   --white-color: #f5f5f5;
-  --bg-orange: rgba(159, 98, 13, 0.8);
+  --grid-color: #384B63;
+  --bg-orange: #c99957;
   --dark-color: rgba(0, 0, 0, 0.66);
   --main-font: "Montserrat", sans-serif;
   --header-font: "Montserrat Alternates", sans-serif;
   --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*https://www.sessions.edu/color-calculator-results/?colors=61337a,633259,3e337a
+  https://www.sessions.edu/color-calculator-results/?colors=563a8c,a3265c,eb8b41
+  https://www.sessions.edu/color-calculator-results/?colors=a3265c,a32a26,8f2b83*/
 }
 html,
 body {
@@ -40,7 +44,7 @@ header {
   z-index: 1500; */
 }
 .sticky {
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
   z-index: 999;
   height: 10vh;
 }
@@ -276,7 +280,7 @@ section {
   height: 100%;
   width: 85%;
   margin: 0 auto;
-  padding-bottom: 2em;
+  padding: 4em 0;
 }
 .card {
   display: grid;
@@ -289,7 +293,7 @@ section {
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
-  margin-top: 3em;
+  margin-top: 4em;
   max-width: 450px;
 }
 .card-icon {
@@ -374,7 +378,6 @@ section {
   padding: 0;
   max-width: 90%;
   overflow-y: hidden;
-  background-color: rgba(37, 75, 124, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .about-grid {
@@ -382,7 +385,8 @@ section {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "image" "body";
   border: solid 3px var(--white-color);
-  background-color: #384B63;
+  background-color: var(--grid-color);
+  /*#384B63*/
 }
 .image-col {
   grid-area: image;
@@ -431,7 +435,6 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: solid 3px var(--white-color);
-  background-color: #384B63;
 }
 .btn-section {
   max-width: 500px;
@@ -462,7 +465,7 @@ section {
   grid-column: 1 / 2;
   align-self: center;
   max-height: 85vh;
-  background-color: #384B63;
+  background-color: var(--grid-color);
 }
 .image-col2 {
   grid-column: 2 / 3;
