@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 :root {
-  --main-color: #254b7c;
+  --main-color: #20152C;
   --secondary-color: #0f9bdc;
   --tri-color: #F64C71;
   --white-color: #f5f5f5;
@@ -45,7 +45,7 @@ header {
   z-index: 1500; */
 }
 .sticky {
-  /* background-color: var(--main-color); */
+  background-color: var(--main-color);
   z-index: 999;
   height: 10vh;
 }
@@ -143,7 +143,7 @@ header {
 .toggle-btn-burger {
   margin: 0 auto;
   width: 20px;
-  height: 2px;
+  height: 1px;
   background-color: white;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
@@ -155,7 +155,7 @@ header {
   position: absolute;
   margin: 0 auto;
   width: 20px;
-  height: 2px;
+  height: 1.5px;
   background-color: white;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
@@ -290,7 +290,7 @@ section {
   grid-template-areas: "image" "text" "btn"; */
   grid-template-rows: 250px 250px;
   grid-template-areas: "image" "text";
-  background: #20152C;
+  background: var(--main-color);
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
@@ -401,7 +401,8 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  box-shadow: 25px 40px 0px 5px rgba(86,61,103,1);
+  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow), 20px 20px 0px 3px rgba(86,61,103,1);
 }
 .body-col {
   max-height: 85vh;
@@ -574,7 +575,7 @@ section {
 .contact-btn {
   text-align: center;
   width: 100%;
-  max-width: 200px;
+  max-width: 250px;
   min-width: auto;
   display: block;
   margin: 0 auto;
@@ -585,13 +586,13 @@ section {
   border: none;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  padding: .6em;
+  padding: .5em;
 }
 .mobile-icon {
   padding-left: 15px;
 }
 footer {
-  padding: 1em 0;
+  padding: 4em 0 2em 0;
   background-color: var(--dark-color);
   text-align: center;
 }
@@ -631,7 +632,7 @@ footer > p > span {
   max-width: 95%;
 }
 .container-portfolio {
-  max-width: 90%;
+  max-width: 95%;
 }
 .port-grid {
   display: grid;
@@ -681,14 +682,21 @@ footer > p > span {
     max-height: 50vh;
   }
   .body-col {
+    margin-top: 0em;
     max-height: 50vh;
   }
   .image-col2 {
     max-height: 50vh;
   }
  .body-col2 {
-   max-height: 50vh;
+   max-height: 55vh;
  }
+ .image-col {
+  padding: 0;
+}
+ .imgLg {
+  box-shadow: var(--box-shadow);
+}
 }
 /* @media only screen and (max-width: 900px) {
   .contact-wrap {
@@ -746,6 +754,10 @@ footer > p > span {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .contact-section {
+    width: 100%;
+    height: 100%;
+  }
   /* .contact-wrap {
     height: 80%;
   } */
@@ -790,7 +802,7 @@ footer > p > span {
     max-width: 90%;
   }
   .container-contact {
-    padding: 0;
+    padding: 0rem;
   }
   .contact-body > h1 {
     font-size: 3.5rem;
@@ -798,6 +810,7 @@ footer > p > span {
   .contact-body > p {
     font-size: 1.8rem;
     max-width: 90%;
+    padding: .5em;
   }
   .contact-section {
     height: 100%;
@@ -900,9 +913,5 @@ footer > p > span {
   .contact-body > p {
     font-size: 1.3rem;
     max-width: 100%;
-  }
-  .contact-section {
-    width: 100%;
-    background: linear-gradient(0deg, rgba(73, 131, 203, 0.1), rgba(73, 131, 203, 0.1));
   }
 }
