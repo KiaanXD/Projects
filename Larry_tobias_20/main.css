@@ -191,7 +191,7 @@ header {
   width: 13em;
   margin: 0 auto;
   background-color: var(--tri-color);
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
   display: block;
@@ -463,7 +463,7 @@ section {
   text-decoration: none;
   border: none;
   margin-bottom: 2.5em;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: var(--box-shadow);
 }
 .body-col2 {
@@ -583,7 +583,7 @@ section {
   color: white;
   text-decoration: none;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: var(--box-shadow);
   padding: .5em;
 }
@@ -592,7 +592,7 @@ section {
 }
 footer {
   padding: 4em 0 2em 0;
-  background-color: var(--dark-color);
+  background-color: var(--main-color);
   text-align: center;
 }
 footer > p {
