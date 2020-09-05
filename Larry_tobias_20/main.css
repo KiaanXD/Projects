@@ -700,7 +700,7 @@ footer > p > span {
     height: 90%;
   }
 } */
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 800px) {
   /**Mobile Navigation**/
   .brand-title {
     max-width: 160px;
