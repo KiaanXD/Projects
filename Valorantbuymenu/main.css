@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.wrapper {
+    height: 100vh;
+}
+.main-grid {
+    border: solid purple;
+    margin: 13px;
+    display: grid;
+    height: 95vh;
+    grid-template-areas: "pistols guns armor"
+                         "pistols guns armor"
+                         "pistols guns armor"
+                         "pistols guns armor"
+                         "pistols guns armor"
+                         "pistols guns armor";
+    grid-template-columns: .3fr 1.3fr .4fr;
+    grid-template-rows: .5fr repeat(5, 1fr);
+}
+.pistols-grid {
+    border: solid red;
+    display: grid;
+    grid-template-areas: "title"
+                         "classic"
+                         "shorty"
+                         "frenzy"
+                         "ghost"
+                         "sheriff";
+    grid-area: pistols;
+    grid-template-rows: .25fr repeat(5, 1fr);
+}
+.guns-grid {
+    border: solid green;
+    display: grid;
+    grid-area: guns;
+    grid-template-rows: .2fr repeat(4, 1fr);
+    grid-template-areas: "smgs rifles sniper"
+                         "stinger bulldog marshal"
+                         "spectre gurdian op"
+                         "bucky phantom ares"
+                         "judge vandal odin";
+}
+.armor-grid {
+    border: solid orange;
+    display: grid;
+    grid-area: armor;
+    grid-template-rows: .2fr repeat(4, 1fr);
+    grid-template-areas: "title"
+                         "light"
+                         "light"
+                         "heavy"
+                         "heavy";
+}
+/*Weapon cells*/
+.classic-cells {
+    grid-area: classic;
+}
+.short-cell {
+    grid-area: shorty;
+}
+.frenzy-cell {
+    grid-area: frenzy;
+}
+.ghost-cell {
+    grid-area: ghost;
+}
+.sheriff-cell {
+    grid-area: sheriff;
+}
+.stinger-cell {
+    grid-area: stinger;
+}
+.spectre-cell {
+    grid-area: spectre;
+}
+.bucky-cell {
+    display: grid;
+    grid-template-areas:"title"
+                        "bucky";
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr .8fr;
+    grid-area: bucky;
+}
+.bucky {
+    grid-area: bucky;
+}
+.judge-cell {
+    grid-area: judge;
+}
+.bulldog-cell {
+    grid-area: bulldog;
+}
+.gurdian-cell {
+    grid-area: gurdian;
+}
+.phantom-cell {
+    grid-area: phantom;
+}
+.vandal-cell {
+    grid-area: vandal;
+}
+.marshel-cell {
+    grid-area: marshel;
+}
+.op-cell {
+    grid-area: op;
+}
+.ares-cell {
+    display: grid;
+    grid-area: ares;
+    display: grid;
+    grid-template-areas:"title"
+                        "ares";
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr .8fr;
+}
+.ares {
+    grid-area: ares;
+}
+.odin-cell {
+    grid-area: odin;
+}
+.light-cell {
+    grid-area: light;
+}
+.heavy-cell {
+    grid-area: heavy;
+}
+/*Weapon titles*/
+.sidearms-title {
+    grid-area: title;
+}
+.smgs-title {
+    grid-area: smgs;
+}
+.rifles-title {
+    grid-area: rifles;
+}
+.sniper-title {
+    grid-area: sniper;
+}
+.armor-title {
+    grid-area: title;
+}
+.shotguns-title {
+    grid-area: title;
+}
+.heavy-title {
+    grid-area: title;
+}
