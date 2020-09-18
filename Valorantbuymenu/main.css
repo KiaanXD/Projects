@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     background: url(body-bg.png);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: fill;
     font-family: VALORANT;
@@ -196,30 +197,37 @@ img {
 .sidearms-title {
     grid-area: title;
     background: rgba(43, 193, 164, 0.5);
+    border-bottom: 1px solid white;
 }
 .smgs-title {
     grid-area: smgs;
     background: rgba(43, 193, 164, 0.5);
+    border-bottom: 1px solid white;
 }
 .rifles-title {
     grid-area: rifles;
     background: rgba(43, 193, 164, 0.5);
+    border-bottom: 1px solid white;
 }
 .sniper-title {
     grid-area: sniper;
     background: rgba(43, 193, 164, 0.5);
+    border-bottom: 1px solid white;
 }
 .armor-title {
     grid-area: title;
     background: rgba(43, 193, 164, 0.5);
+    border-bottom: 1px solid white;
 }
 .shotguns-title {
     grid-area: title;
     background: rgba(43, 193, 164, 0.4);
+    border-bottom: 1px solid white;
 }
 .heavy-title {
     grid-area: title;
     background: rgba(43, 193, 164, 0.4);
+    border-bottom: 1px solid white;
 }
 .doublegrid-title {
     display: flex;
