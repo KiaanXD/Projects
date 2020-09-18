@@ -5,16 +5,58 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+    font-family: VALORANT;
+    src: url("Valorant_Font.ttf");
+}
 body {
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    background: url(body-bg.png);
+    background-position: center;
+    background-size: fill;
+    font-family: VALORANT;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 1em;
+}
+.grid-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.image-content {
+    height: 100%;
+    width: 100%;
+}
+.shield-cell {
+    padding: 2.5em;
+}
+.weapon-title {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    color: white;
+}
+.shield-title {
+    position: absolute;
+    bottom: 10px;
+    left: 30%;
+    color: white;
 }
 .wrapper {
     height: 100vh;
 }
 .main-grid {
-    border: solid purple;
     margin: 13px;
     display: grid;
     height: 95vh;
@@ -26,9 +68,9 @@ body {
                          "pistols guns armor";
     grid-template-columns: .3fr 1.3fr .4fr;
     grid-template-rows: .5fr repeat(5, 1fr);
+    gap: 14px;
 }
 .pistols-grid {
-    border: solid red;
     display: grid;
     grid-template-areas: "title"
                          "classic"
@@ -37,21 +79,22 @@ body {
                          "ghost"
                          "sheriff";
     grid-area: pistols;
-    grid-template-rows: .25fr repeat(5, 1fr);
+    grid-template-rows: .25fr repeat(5, minmax(100px, 1fr));
+    grid-gap: 7px;
 }
 .guns-grid {
-    border: solid green;
     display: grid;
     grid-area: guns;
-    grid-template-rows: .2fr repeat(4, 1fr);
+    grid-template-rows: .2fr repeat(4, minmax(100px, 1fr));
+    grid-template-columns: 1fr 1.2fr 1.3fr;
     grid-template-areas: "smgs rifles sniper"
                          "stinger bulldog marshal"
                          "spectre gurdian op"
                          "bucky phantom ares"
                          "judge vandal odin";
+    grid-gap: 7px;
 }
 .armor-grid {
-    border: solid orange;
     display: grid;
     grid-area: armor;
     grid-template-rows: .2fr repeat(4, 1fr);
@@ -60,6 +103,17 @@ body {
                          "light"
                          "heavy"
                          "heavy";
+    grid-gap: 7px;
+}
+.grid-item {
+    background: rgba(82, 77, 73, 0.66);
+}
+.grid-item:hover {
+    background: rgba(76, 171, 153, 0.9);
+}
+.grid-item:hover .image-content {
+    transition-duration: .3s;
+    border: solid #55CCB0;
 }
 /*Weapon cells*/
 .classic-cells {
@@ -90,6 +144,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: .2fr .8fr;
     grid-area: bucky;
+    margin-top: .5em;
 }
 .bucky {
     grid-area: bucky;
@@ -122,7 +177,8 @@ body {
     grid-template-areas:"title"
                         "ares";
     grid-template-columns: 1fr;
-    grid-template-rows: .2fr .8fr;
+    grid-template-rows: .2fr 1fr;
+    margin-top: .5em;
 }
 .ares {
     grid-area: ares;
@@ -139,22 +195,35 @@ body {
 /*Weapon titles*/
 .sidearms-title {
     grid-area: title;
+    background: rgba(43, 193, 164, 0.5);
 }
 .smgs-title {
     grid-area: smgs;
+    background: rgba(43, 193, 164, 0.5);
 }
 .rifles-title {
     grid-area: rifles;
+    background: rgba(43, 193, 164, 0.5);
 }
 .sniper-title {
     grid-area: sniper;
+    background: rgba(43, 193, 164, 0.5);
 }
 .armor-title {
     grid-area: title;
+    background: rgba(43, 193, 164, 0.5);
 }
 .shotguns-title {
     grid-area: title;
+    background: rgba(43, 193, 164, 0.4);
 }
 .heavy-title {
     grid-area: title;
+    background: rgba(43, 193, 164, 0.4);
+}
+.doublegrid-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
 }
